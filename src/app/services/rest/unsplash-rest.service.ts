@@ -12,8 +12,8 @@ export class UnsplashRestService {
   private httpService: HttpClient = inject(HttpClient);
 
   public getPhotos(
-    page: number = 1,
-    perPage: number = 10
+    page: number = 0,
+    perPage: number = 12
   ): Observable<IPhoto[]> {
     return this.httpService
       .get<IPhoto[]>(

@@ -1,0 +1,6 @@
+
+<button (click)="previousPage(1)" [disabled]="paginatorService.actualPage() < 2">Previous Page</button>
+<button (click)="nextPage(2)" >{{paginatorService.actualPage() + 1}}</button>
+<button (click)="nextPage(3)" >{{paginatorService.actualPage() + 2}}</button>
+<button (click)="nextPage(4)" >{{paginatorService.actualPage() + 3}}</button>
+<button (click)="nextPage(1)">Next Page</button>

@@ -24,14 +24,14 @@ export class PaginatorService {
       })
   }
 
-  nextPage() {
-      this.actualPage.set(this.actualPage() + 1);
+  nextPage(advance : number) {
+      this.actualPage.set(this.actualPage() + advance);
       this.getPhotos(this.actualPage());
   }
 
-  previousPage() {
+  previousPage(backOff : number) {
       if (this.actualPage() > 1) {
-          this.actualPage.set(this.actualPage() - 1);
+          this.actualPage.set(this.actualPage() - backOff);
           this.getPhotos(this.actualPage());
       }
   }

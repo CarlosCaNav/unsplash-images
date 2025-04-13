@@ -1,10 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { UnsplashRestService } from './services/rest/unsplash-rest.service';
-import { IPhoto } from './models/photo';
 import { HttpClientModule } from '@angular/common/http';
 import { PhotoGridComponent } from './components/photo-grid/photo-grid.component';
 import { PaginatorService } from './services/paginator.service';
+import { HeaderComponent } from "./components/header/header.component";
+import { PaginatorComponent } from "./components/paginator/paginator.component";
 
 
 
@@ -13,8 +13,10 @@ import { PaginatorService } from './services/paginator.service';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, HttpClientModule,
-    PhotoGridComponent
+    HttpClientModule,
+    PhotoGridComponent,
+    HeaderComponent,
+    PaginatorComponent
 ],
   providers: [
       UnsplashRestService,
@@ -34,11 +36,4 @@ export class AppComponent implements OnInit {
         this.paginatorService.getPhotos();
     }
 
-    nextPage() {
-        this.paginatorService.nextPage();
-    }
-
-    previousPage() {
-        this.paginatorService.previousPage();
-    }
 }

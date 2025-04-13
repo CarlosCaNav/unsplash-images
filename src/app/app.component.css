@@ -1,0 +1,14 @@
+.box {
+/*   border: 2px solid blue; */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: rgb(114, 167, 167);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  font-size: larger;
+  color: white;
+}

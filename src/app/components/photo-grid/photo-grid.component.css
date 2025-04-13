@@ -1,3 +1,11 @@
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
 .photo-box {
     min-width: 300px;
     min-height: 300px;
